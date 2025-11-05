@@ -3,29 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Northern Sky - Renewable Energy Construction Company specializing in solar power plant civil works.">
     <title>Northern Sky - Renewable Energy Construction</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #00063d; color: white; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { height: 50px; }
+        nav ul { list-style: none; display: flex; gap: 15px; margin: 0; padding: 0; }
+        nav ul li a { color: white; text-decoration: none; padding: 8px 12px; }
+        nav ul li a:hover { background-color: #92D050; color: #00063d; border-radius: 4px; }
+        section { display: none; padding: 20px; }
+        section.active { display: block; }
+        footer { background-color: #00063d; color: white; text-align: center; padding: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        form input, form textarea, form button { display: block; width: 100%; margin: 10px 0; padding: 8px; }
+        form button { background-color: #92D050; border: none; color: #00063d; font-weight: bold; cursor: pointer; }
+    </style>
 </head>
 <body>
     <header>
         <img src="logo.png" alt="Northern Sky Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#vision">Vision & Mission</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#why">Why Choose Us</a></li>
-                <li><a href="#machinery">Machineries</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#group">Group Companies</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#" onclick="showTab('home')">Home</a></li>
+                <li><a href="#" onclick="showTab('about')">About Us</a></li>
+                <li><a href="#" onclick="showTab('vision')">Vision & Mission</a></li>
+                <li><a href="#" onclick="showTab('services')">Services</a></li>
+                <li><a href="#" onclick="showTab('why')">Why Choose Us</a></li>
+                <li><a href="#" onclick="showTab('machinery')">Machineries</a></li>
+                <li><a href="#" onclick="showTab('projects')">Projects</a></li>
+                <li><a href="#" onclick="showTab('group')">Group Companies</a></li>
+                <li><a href="#" onclick="showTab('contact')">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home" class="active">
         <h1>Welcome to Northern Sky</h1>
         <p>Leading the way in renewable energy construction</p>
     </section>
@@ -118,5 +132,15 @@
     <footer>
         <p>&copy; 2024 Northern Sky. All rights reserved.</p>
     </footer>
+
+    <script>
+        function showTab(tabId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
