@@ -1,0 +1,52 @@
+.machine-list {
+  margin-top: 50px;
+  padding-bottom: 40px;
+}
+
+/* EACH ITEM */
+.machine-item {
+  font-size: 1.6rem;              /* BIGGER FONT */
+  font-weight: 600;
+  color: #ffffff;
+  position: relative;
+  margin: 12px 0;
+  padding-left: 30px;             /* space for arrow */
+  animation: slideFade 1s ease forwards;
+  opacity: 0;
+}
+
+/* ARROW ICON */
+.machine-item::before {
+  content: "➤";                   /* arrow style */
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1.6rem;
+  color: #92D050;                 /* green arrow */
+  font-weight: bold;
+  animation: arrowFloat 1.5s infinite ease-in-out;
+}
+
+/* ANIMATION: TEXT SLIDE + FADE */
+@keyframes slideFade {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* ARROW FLOAT ANIMATION */
+@keyframes arrowFloat {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(6px); }
+  100% { transform: translateX(0px); }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .machine-item {
+    font-size: 1.2rem;
+  }
+
+  .machine-item::before {
+    font-size: 1.2rem;
+  }
+}
