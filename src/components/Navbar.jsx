@@ -129,11 +129,6 @@ const Navbar = () => {
                 What We Do
               </Link>
             </li>
-             <li className="nav-item">
-              <Link className="nav-link" to="/sites" style={navbarStyles.navLink}>
-                Location
-              </Link>
-            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/why" style={navbarStyles.navLink}>
                 Why Us

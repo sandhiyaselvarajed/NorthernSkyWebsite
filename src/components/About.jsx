@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 // import { FiArrowUpRight } from "react-icons/fi";
 import "./About.css";
 import companyBg from "../assets/solor3.jpeg";
-import solarImage1 from "../assets/solor10.jpeg";
+import solarImage1 from "../assets/fencing_solar/fs1.jpg";
 import solarImage2 from "../assets/solor4.jpeg";
 import solarImage3 from "../assets/solor1.jpeg";
 
