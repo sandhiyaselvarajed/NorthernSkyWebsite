@@ -1,0 +1,135 @@
+.mission-vision-container {
+  background: #f0f0f0;
+  padding: 50px;
+}
+
+/* .section-title {
+  color: black;
+  font-size: 30px;
+} */
+
+.mv-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.mv-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 1s ease forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+.vision {
+    border-left: 6px solid #28a745;
+}
+
+.mission {
+    border-left: 6px solid #0b3e71;
+}
+
+.mv-card h3 {
+  font-size: 26px;
+  color: #050809;
+  font-size:300;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.mv-card h4 {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+}
+.list-style {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list-style li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 16px;
+}
+
+.list-style li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background: #28a745;
+  border-radius: 50%;
+}
+
+.list-style li::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 18px;
+  width: 2px;
+  height: 100%;
+  background: #e0e0e0;
+}
+
+
+.mv-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.mv-card blockquote {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-bottom:20px;
+  border-left: 4px solid #d19cd3;
+  font-style: italic;
+  color: #333;
+}
+
+/* Mission List */
+.mv-card ul {
+  padding-left: 20px;
+}
+
+.mv-card ul li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  position: relative;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mission-vision-container {
+    padding: 60px 6%;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
