@@ -2,26 +2,34 @@
   "name": "northern-sky",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "aos": "^2.3.4",
-    "bootstrap": "^5.3.8",
-    "gsap": "^3.14.1",
-    "leaflet": "^1.9.4",
-    "react": "^19.2.1",
-    "react-bootstrap": "^2.10.10",
-    "react-dom": "^19.2.1",
-    "react-icons": "^5.5.0",
-    "react-leaflet": "^5.0.0",
-    "react-router-dom": "^7.10.1",
-    "react-scripts": "5.0.1",
-    "react-scroll": "^1.9.3",
-    "react-simple-maps": "^3.0.0",
-    "web-vitals": "^2.1.4"
-  },
+
+"dependencies": {
+  "react": "18.3.1",
+  "react-dom": "18.3.1",
+  "react-scripts": "5.0.1",
+
+  "react-simple-maps": "3.0.0",      
+  "react-leaflet": "4.2.1",          
+  "leaflet": "1.9.4",
+
+  "react-bootstrap": "2.10.10",
+  "react-router-dom": "7.10.1",
+  "react-icons": "5.5.0",
+  "aos": "2.3.4",
+  "gsap": "3.14.1",
+  "bootstrap": "5.3.8",
+  "@testing-library/dom": "10.4.1",
+  "@testing-library/jest-dom": "6.9.1",
+  "@testing-library/react": "16.3.1",
+  "@testing-library/user-event": "13.5.0",
+  "web-vitals": "2.1.4"
+},
+"devDependencies": {
+  "ajv": "6.12.6",
+  "ajv-keywords": "3.5.2",
+  "schema-utils": "3.3.0"
+},
+
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
