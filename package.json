@@ -2,6 +2,7 @@
   "name": "northern-sky",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://northernskydevelopers.com",
 
 "dependencies": {
   "react": "18.3.1",
