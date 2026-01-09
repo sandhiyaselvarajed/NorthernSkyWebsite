@@ -1,52 +1,193 @@
-.machine-list {
-  margin-top: 50px;
-  padding-bottom: 40px;
+.heading {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
-/* EACH ITEM */
-.machine-item {
-  font-size: 1.6rem;              /* BIGGER FONT */
-  font-weight: 600;
-  color: #ffffff;
+.tagline {
+  text-align: center;
+  color: #92D050;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #92D050, #002060);
+  padding: 2rem;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1.05rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.collage-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.collage {
   position: relative;
-  margin: 12px 0;
-  padding-left: 30px;             /* space for arrow */
-  animation: slideFade 1s ease forwards;
-  opacity: 0;
+  width: 520px;
+  height: 420px;
 }
 
-/* ARROW ICON */
-.machine-item::before {
-  content: "➤";                   /* arrow style */
+.collage-img {
   position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 1.6rem;
-  color: #92D050;                 /* green arrow */
-  font-weight: bold;
-  animation: arrowFloat 1.5s infinite ease-in-out;
+  width: 240px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.4s ease;
 }
 
-/* ANIMATION: TEXT SLIDE + FADE */
-@keyframes slideFade {
-  0% { opacity: 0; transform: translateX(-20px); }
-  100% { opacity: 1; transform: translateX(0); }
+.img-1 {
+  top: 20px;
+  left: 20px;
 }
 
-/* ARROW FLOAT ANIMATION */
-@keyframes arrowFloat {
-  0% { transform: translateX(0px); }
-  50% { transform: translateX(6px); }
-  100% { transform: translateX(0px); }
+.img-2 {
+  top: 20px;
+  right: 20px;
+  animation-delay: 1s;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .machine-item {
-    font-size: 1.2rem;
+.img-3 {
+  top: 220px;
+  left: 20px;
+  animation-delay: 2s;
+}
+
+.img-4 {
+  top: 220px;
+  right: 20px;
+  animation-delay: 3s;
+}
+
+.collage-img:hover {
+  transform: scale(1.07);
+  z-index: 5;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.8rem;
+    /* margin-bottom: 100px; */
   }
 
-  .machine-item::before {
-    font-size: 1.2rem;
+  .tagline {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .collage {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .collage-img {
+    position: static;
+    width: 100%;
+    height: 150px;
+    animation: none;
   }
 }
+
+.collage-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.collage {
+  position: relative;
+  width: 760px;         
+  height: 520px;   
+  padding: 20px;
+}
+
+.collage-img {
+  position: absolute;
+  width: 220px;          
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+.img-1 { top: 20px; left: 20px; }
+.img-2 { top: 20px; left: 270px; animation-delay: 1s; }
+.img-3 { top: 20px; left: 520px; animation-delay: 2s; }
+
+.img-4 { top: 260px; left: 20px; animation-delay: 3s; }
+.img-5 { top: 260px; left: 270px; animation-delay: 4s; }
+.img-6 { top: 260px; left: 520px; animation-delay: 5s; }
+
+.collage-img:hover {
+  transform: scale(1.07);
+  z-index: 5;
+}
+
+.main-content {
+  padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 768px) {
+
+  .heading {
+    font-size: 1.8rem;
+    padding-bottom: 50px;
+}
+
+  .tagline {
+    font-size: 0.9rem;
+    /* padding: 0 10px; */
+  }
+
+  .collage {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 10px;
+  }
+
+  .collage-img {
+    position: static;       
+    width: 100%;
+    height: 140px;
+    animation: none;   
+  }
+}
+

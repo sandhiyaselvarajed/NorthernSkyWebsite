@@ -3,11 +3,6 @@
   padding: 50px;
 }
 
-/* .section-title {
-  color: black;
-  font-size: 30px;
-} */
-
 .mv-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -27,21 +22,23 @@
   transform: translateY(-12px);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
 }
+
 .vision {
-    border-left: 6px solid #28a745;
+  border-left: 6px solid #28a745;
 }
 
 .mission {
-    border-left: 6px solid #0b3e71;
+  border-left: 6px solid #0b3e71;
 }
 
 .mv-card h3 {
   font-size: 26px;
-  color: #050809;
-  font-size:300;
+  font-weight: 600;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 10px;
   padding-bottom: 10px;
+  color: #050809;
+  text-align: left;
 }
 
 .mv-card h4 {
@@ -49,6 +46,7 @@
   color: #777;
   margin-bottom: 20px;
 }
+
 .list-style {
   list-style-type: none;
   padding-left: 0;
@@ -58,6 +56,9 @@
   position: relative;
   padding-left: 25px;
   margin-bottom: 16px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
 }
 
 .list-style li::before {
@@ -81,6 +82,13 @@
   background: #e0e0e0;
 }
 
+.mission img {
+  width: 12vw;
+  height: 25vh;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+}
 
 .mv-card p {
   font-size: 15px;
@@ -92,26 +100,12 @@
 .mv-card blockquote {
   margin-top: 20px;
   padding-left: 20px;
-  padding-bottom:20px;
+  padding-bottom: 20px;
   border-left: 4px solid #d19cd3;
   font-style: italic;
   color: #333;
 }
 
-/* Mission List */
-.mv-card ul {
-  padding-left: 20px;
-}
-
-.mv-card ul li {
-  margin-bottom: 12px;
-  font-size: 15px;
-  color: #555;
-  line-height: 1.7;
-  position: relative;
-}
-
-/* Animation */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -122,14 +116,72 @@
     transform: translateY(0);
   }
 }
+.main-content {
+  padding-top: 70px; 
+}
 
-/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 60px;
+  }
+}
+
 @media (max-width: 768px) {
   .mission-vision-container {
-    padding: 60px 6%;
+    padding: 80px 15px 40px;
   }
 
-  .section-title {
-    font-size: 28px;
+  .mv-card h3 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 15px;
+    display: block;
+    color: #050809;
+  }
+
+  .mv-card h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .mv-wrapper {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .mv-card {
+    padding: 25px;
+  }
+
+  
+  .mission img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  .mv-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .list-style li {
+    padding-left: 20px;
+    font-size: 0.9rem;
+  }
+
+  .list-style li::before {
+    width: 5px;
+    height: 5px;
+  }
+
+  .list-style li::after {
+    left: 1.5px;
+  }
+
+  .mv-card blockquote {
+    font-size: 0.9rem;
+    padding-left: 15px;
+    padding-bottom: 15px;
   }
 }

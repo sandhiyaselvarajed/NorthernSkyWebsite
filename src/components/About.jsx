@@ -1,15 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import {FaCheck } from "react-icons/fa";
-// import { FiArrowUpRight } from "react-icons/fi";
 import "./About.css";
 import companyBg from "../assets/solor3.jpeg";
-import solarImage1 from "../assets/fencing_solar/fs1.jpg";
-import solarImage2 from "../assets/solor4.jpeg";
-import solarImage3 from "../assets/solor1.jpeg";
+import solarImage1 from "../assets/fencing_solar/fs1.JPG";
+import solarImage2 from "../assets/fencing_solar/solarpanal1.png";
+import solarImage3 from "../assets/fencing_solar/fs10.jpg";
 
-// logos
 import logo1 from "../assets/adanilogo.webp"
 import logo2 from "../assets/avaadalogo.webp"
 import logo3 from "../assets/Ayana.png"
@@ -18,7 +15,6 @@ import logo4 from "../assets/sprng.png"
 import logo5 from "../assets/swelect.webp"
 import logo6 from "../assets/irconlogo.webp"
 import renewpoer from '../assets/renewpoer.webp'
-
 
 const About = () => {
   useEffect(() => {
@@ -75,9 +71,7 @@ const About = () => {
                 <div className="hover-overlay"></div>
               </div>
             </div>
-          </div>
-
-          
+          </div>   
           <div className="col-lg-6">
             <div className="row g-3 mb-4">
               <div className="col-6">
@@ -125,14 +119,12 @@ const About = () => {
               data-aos-duration="500" 
               className="about-text-secondary"
             >
-              Based in <span classname="erode">Erode</span> - Tamil Nadu, we bring over 6+ years of proven excellence in serving
+              Based in <span className="erode">Erode</span> - Tamil Nadu, we bring over 6+ years of proven excellence in serving
               top-tier clients in the renewable energy sector. Our commitment to
               on-time project completion and dedication to quality and safety sets us
               apart.
             </p>
         </div>
-
-
             <div
               data-aos="fade-up"
               data-aos-anchor-placement="top-center"
@@ -188,16 +180,13 @@ const About = () => {
                     className="step-card"
                     style={{ "--step": i, "--delay": `${i * 80}ms` }}
                     data-aos="zoom-in-up"
-                    data-aos-delay={i * 80}  // AOS stagger (optional)
+                    data-aos-delay={i * 80} 
                   >
-                    {/* L-shaped corners */}
                     <span className="step-corner step-corner--primary" aria-hidden="true" />
                     <span className="step-corner step-corner--overlay" aria-hidden="true" />
-
                     <header className="step-head">
                       <span className="step-year">{m.year}</span>
                     </header>
-
                     <div className="step-body">
                       <ul className="step-list">
                         {m.bullets.map((b, idx) => (
@@ -209,23 +198,18 @@ const About = () => {
                 ))}
               </div>
             </div>
-
             <div 
               data-aos="fade-up"
               data-aos-anchor-placement="top-center" 
-              className="row g-3 align-items-center contact-section"
-            >
+              className="row g-3 align-items-center contact-section">
             </div>
         </div>
-
         <div
         className="group-companies-section text-center"
         style={{ backgroundImage: `url(${companyBg})` }}
-        data-aos="fade-up"
-      >
+        data-aos="fade-up">
         <div className="group-companies-content">
           <h3 className="group-companies-title">Our Clients</h3>
-
           <div className="logo-marquee">
             <div className="logo-track">
               <img src={logo1} alt="Adani" />

@@ -13,9 +13,10 @@ import img8 from "../assets/solorns1.jpg";
 import img9 from "../assets/solorns3.jpg";
 import img10 from "../assets/site5.jpg";
 import img11 from "../assets/solor9.jpeg";
+import img12 from "../assets/fencing_solar/solarpanal1.png"
 // import img12 from "../assets/solor3.jpeg";  
 
-const images = [img11,img11,img1,img9,img2, img3, img4,img5,img11,img6,img7,img8,img10];
+const images = [img11,img11,img1,img9,img12,img2, img3, img4,img5,img11,img6,img7,img8,img10];
 
 const Home = () => {
   return (
@@ -60,18 +61,36 @@ const Home = () => {
         style={{
           position: "relative",
           zIndex: 2,
-        }}
-      >
+        }}>
             <div className="row w-100">
-            <div className="col-md-6 ps-5">
-              <p className="animated-text">
+            <div className="col-md-8 ps-5">
+              <p className="animated-text mt-4">
                 “Empowering Renewable Energy”
               </p>
-              <p className="animated-text m-2">
-                Tailored Civil Engineering Excellence for Sustainable Projects.”
+              <p className="animated-text mb-4">
+                “Tailored Civil Engineering Excellence for Sustainable Projects”
               </p>
             </div>
           </div>
+
+          <div className="col-md-4 d-flex justify-content-md-end justify-content-center">
+            {/* <h1>Hii everyone </h1> */}
+             <div className="home-stats">
+              <div className="home-stat-card">
+                <h2>8+</h2>
+                <p>Location Covered</p> 
+              </div>
+              <div className="home-stat-card">
+                <h2>16+</h2>
+                <p>Projects Completed</p>
+              </div>
+              <div className="home-stat-card">
+                <h2>6+</h2>
+                <p>Years of Experience</p>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
   );

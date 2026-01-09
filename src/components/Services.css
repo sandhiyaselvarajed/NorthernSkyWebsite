@@ -9,7 +9,9 @@
   font-weight: 700;
   margin-bottom: 30px;
   background: linear-gradient(#92D050, #00063d);
-  -webkit-background-clip: text;
+  background-clip: text;          /* Standard property */
+  -webkit-background-clip: text;  /* Chrome, Safari */
+  color: transparent;
   -webkit-text-fill-color: transparent;
 } 
 
@@ -38,4 +40,24 @@
   font-size: 25px;
   color: #92D050;
   margin-bottom: 10px;
+}
+
+.main-content {
+  padding-top: 70px; 
+}
+
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 60px; 
+  }
+}
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 1.8rem;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
 }

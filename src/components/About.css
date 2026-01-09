@@ -19,7 +19,7 @@
 }
 
 .about-subtitle1 {
-  color: #080643;
+  color: #0a083e;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -150,7 +150,7 @@
 }
 
 .milestones-section {
-  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
 .milestones-title {
@@ -375,7 +375,7 @@
   grid-auto-columns: minmax(240px, 1fr);
   gap: 2rem;
   align-items: end; 
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 
@@ -467,11 +467,169 @@
     display: none;
   }
 }
-
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .milestones-section.steps.steps--no-line .step-card {
     transform: none;
     animation: none;
+  }
+}
+
+@media (max-width: 992px) {
+  /* About section */
+  .about-section {
+    padding: 2.5rem 1rem;
+    min-height: auto;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-text,
+  .about-text-secondary {
+    font-size: 0.95rem;
+    padding-top: 8px;
+  }
+
+  .about-main-image {
+    margin-top: 1rem;
+  }
+
+  .about-grid-image {
+    height: 180px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .watch-story-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .milestones-section {
+    margin-bottom: 2rem;
+  }
+
+  .milestones-section.steps.steps--no-line .steps-wrap {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    align-items: start;
+    padding-bottom: 1rem;
+  }
+
+  .milestones-section.steps.steps--no-line .step-card {
+    transform: none;
+    animation: stepEnter 420ms ease var(--delay, 0ms) both;
+  }
+
+  .milestones-section.steps.steps--no-line .step-corner--overlay {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 0.8rem;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-text,
+  .about-text-secondary {
+    font-size: 0.9rem;
+    padding-top: 5px;
+  }
+
+  .about-main-image {
+    margin-top: 0.8rem;
+  }
+
+  .about-grid-image {
+    height: 160px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .watch-story-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .group-companies-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .group-companies-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .company-logos {
+    gap: 15px;
+  }
+
+  .company-logos img,
+  .logo-track img {
+    height: 50px; 
+  }
+
+  .logo-track {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    animation: none;
+  }
+
+  .logo-marquee {
+    overflow: visible;
+  }
+
+
+  .milestones-section.steps.steps--no-line .step-year {
+    font-size: 1rem;
+  }
+
+  .milestones-section.steps.steps--no-line .step-list {
+    font-size: 0.85rem;
+    padding-left: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-title {
+    font-size: 1.4rem;
+  }
+
+  .about-grid-image {
+    height: 140px;
+  }
+
+  .group-companies-title {
+    font-size: 1.25rem;
+  }
+
+  .group-company-name {
+    font-size: 0.9rem;
+  }
+
+  .company-logos img,
+  .logo-track img {
+    height: 40px;
+  }
+
+  .milestones-section {
+    margin-bottom: 1.5rem;
   }
 }

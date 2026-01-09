@@ -1,16 +1,24 @@
 .contact {
   position: relative;
+  width: 100%;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 80px 20px 40px;
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .contact-overlay {
-  background-color: rgba(0,0,0,0.5); 
+  background-color: rgba(0,0,0,0.5);
   padding: 50px 20px;
   border-radius: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contact-container {
@@ -18,16 +26,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .contact-section {
   flex: 1 1 300px;
 }
 
-.contact-section h3 {
-  font-size: 3.2rem;
+.contact-section h4 {
+  font-size: 2.5rem;
   margin-bottom: 15px;
   color: #92D050;
   border-bottom: 2px solid #92D050;
@@ -39,7 +45,7 @@
   margin: 12px 0;
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.10rem;
 }
 
 .contact-section a {
@@ -51,23 +57,17 @@
 
 .contact-section a:hover {
   color: #92D050;
-  height:20px;
-  width: 10px;
 }
 
 .icon {
   color: #92D050;
   min-width: 40px;
 }
-.text-size{
-    font-size: 80px;
-}
 
 .contact-bottom {
   text-align: center;
   margin-top: 40px;
-  /* font-size: 1.9rem; */
-  font-size: 20px;
+  font-size: 1.4rem;
   color: #ccc;
 }
 
@@ -87,13 +87,47 @@
     transform: translateY(0);
   }
 }
+
 @media (max-width: 768px) {
+  .contact {
+    padding: 60px 15px;
+    min-height: auto; 
+    display: block; 
+  }
+
+  .contact-overlay {
+    padding: 30px 15px;
+    border-radius: 10px;
+  }
+
   .contact-container {
     flex-direction: column;
+    gap: 20px;
     align-items: center;
+  }
+
+  .contact-section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contact-section h4 {
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
 
   .contact-section p {
     justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    min-width: 24px;
+    font-size: 1rem;
+  }
+
+  .contact-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
   }
 }

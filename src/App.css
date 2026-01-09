@@ -1,16 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Poppins', sans-serif;
-}
-.container {
-  background-image: url("../assets/ng1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  padding-top: 70px;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* navbar styles – REMOVE */
+.navbar {
+  padding: 8px 15px;
+}
+
+.navbar a {
+  font-size: 0.9rem;
+  margin-left: 10px;
+}

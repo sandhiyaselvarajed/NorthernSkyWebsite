@@ -4,7 +4,6 @@ import "./MissionVision.css";
 const Missionvision = () => {
   return (
     <div className="mission-vision-container">
-      {/* <h2 className="section-title text-center">Mission & Vision</h2> */}
 
       <div className="mv-wrapper">
         <div className="mv-card vision">
@@ -25,6 +24,7 @@ const Missionvision = () => {
             “We strive to be at the forefront of the renewable energy revolution,
             providing solutions for a better future.”
           </blockquote>
+
         </div>
 
         <div className="mv-card mission">
@@ -57,7 +57,8 @@ const Missionvision = () => {
           </ul>
         </div>
       </div>
-    </div>
+    
+    </div>    
   );
 };
 

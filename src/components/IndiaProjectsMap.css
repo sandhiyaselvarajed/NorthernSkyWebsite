@@ -1,0 +1,76 @@
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+/* RESET */
+.map-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  flex: 1;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+/* HEADING */
+.map-heading {
+  margin: 0;
+  padding: 10px 6px;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* MAP CONTAINER (DESKTOP) */
+.map-container {
+  width: 100%;
+  height: 520px;
+}
+
+/* Leaflet base */
+.leaflet-map,
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* REMOVE LEAFLET FOOTER */
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+  .map-heading {
+    font-size: 1.7rem;
+    padding: 6px;
+  }
+
+  .map-container {
+    height: 380px;
+  }
+}
+
+/* 🔥 MOBILE FULL SCREEN */
+@media (max-width: 576px) {
+  .map-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 10px 8px;
+  }
+
+  .map-container {
+    height: calc(100vh - 48px); /* full screen minus heading */
+  }
+}
