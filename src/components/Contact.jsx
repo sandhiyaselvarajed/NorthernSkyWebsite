@@ -1,23 +1,22 @@
 import React from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import "./Contact.css";
-import footerBg from "../assets/northersky3.jpg"; 
+import footerBg from "../assets/northersky3.jpg"; // your image
 
 const Contact = () => {
   return (
-    <section className="contact" style={{ backgroundImage: `url(${footerBg})` }}>
+    <section
+      className="contact"
+      style={{ backgroundImage: `url(${footerBg})` }}
+    >
       <div className="contact-overlay">
         <div className="contact-container">
           <div className="contact-section fade-in">
             <h4>Contact Us</h4>
             <p>
               <FaEnvelope className="icon" />
-              <a href="mailto:contact@northernskydev.com text-size w-25 ">contact@northernskydev.com</a>
+              <a href="mailto:contact@northernskydev.com">contact@northernskydev.com</a>
             </p>
-            {/* <p>
-              <FaEnvelope className="icon" />
-              <a href="mailto:projects@northernskydev.com">projects@northernskydev.com</a>
-            </p> */}
             <p>
               <FaPhoneAlt className="icon" />
               <a href="tel:+919443918260">+91 9443918260</a>, 
