@@ -10,18 +10,21 @@ import img6 from "../assets/solorns1.jpg"
 
 const WhyChooseUs = () => {
   const features = [
-    "In-house experts driving professional project management.",
-    "Advanced technology ensuring continuous monitoring.",
-    "Cost-effective solutions from design to delivery."
+    "Experienced project teams for professional site coordination.",
+    "Practical monitoring and controls for dependable progress.",
+    "Cost-conscious execution from design support to handover."
   ];
 
   return (
-    <div className="container py-5">
-
-      <h2 className="heading">Why Choose Us</h2>
-      <p className="tagline">
-        POWERING THE FUTURE WITH 6+ YEARS OF RENEWABLE EXPERTISE
-      </p>
+    <section className="why-section">
+      <div className="container">
+        <div className="section-heading">
+          <p className="section-eyebrow">Why Northern Sky</p>
+          <h2 className="heading">A lean partner for serious renewable energy work.</h2>
+          <p className="tagline">
+            6+ years of renewable execution experience with a focus on quality, safety, and timelines.
+          </p>
+        </div>
 
       <div className="features-container">
         {features.map((item, index) => (
@@ -42,7 +45,8 @@ const WhyChooseUs = () => {
         </div>
       </div>
 
-    </div>
+      </div>
+    </section>
   );
 };
 

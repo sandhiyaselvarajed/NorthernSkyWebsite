@@ -2,7 +2,10 @@ import React from 'react';
 import Home from "../components/Home";
 import Nsmarquess from "../components/Nsmarquee";
 import About from '../components/About';
-// import Contact from '../components/Contact'
+import Services from '../components/Services';
+import Whatwedo from '../components/Whatwedo';
+import WhyChooseUs from '../components/WhyChooseUs';
+import Contact from '../components/Contact';
 
 const Homepage = () => {
     return (
@@ -10,7 +13,10 @@ const Homepage = () => {
             <Home />
             <Nsmarquess />
             <About/>
-            {/* <Contact/> */}
+            <Services />
+            <Whatwedo />
+            <WhyChooseUs />
+            <Contact/>
         </>
     );
 };
