@@ -85,3 +85,8 @@
     grid-template-columns: 1fr;
   }
 }
+.bottom_footer{
+  color: white;
+  font-weight:30;
+  font-size: small;;
+}

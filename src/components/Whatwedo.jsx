@@ -2,22 +2,29 @@ import React, { useState } from "react";
 import Projects from "./Projects";
 import "./Whatwedo.css";
 
-import swelect from "../assets/fencing_solar/fs21.jpg";
-import valente from "../assets/fencing_solar/solarpanal1.png";
+import swelect from "../assets/I and C/Pic_2.jpg";
+import valente from "../assets/I and C/solor1.jpeg";
 import adani from "../assets/site7.jpg";
 import ayana1 from "../assets/fencing_solar/solarpanel3.png";
 import avaada from "../assets/solorns2.jpg";
 import ayana2 from "../assets/ns-site6.jpg";
-import faben from "../assets/fencing_solar/solarpanel5.png";
+import faben from "../assets/I and C/northersky9.jpg";
+import Evolta from "../assets/I and C/Pic 3 1.jpg";
+import Resolven from "../assets/fencing_solar/solarpanel5.png";
+import Cleanmax from "../assets/solorns5.jpeg";
 
 const projectVal = [
-  { id: 1, name: "Solar - Swelect", client: "Swelect Energy", capacity: "5 MW", status: "Ongoing", image: swelect },
-  { id: 2, name: "Solar - Valente Lifespace", client: "Valente Pvt Ltd", capacity: "500 MW", status: "Ongoing", image: valente },
-  { id: 3, name: "Solar - Adani Green Energy", client: "Adani", capacity: "250 MW", status: "Completed", image: adani },
-  { id: 4, name: "Solar - Ayana Kadapa", client: "Ayana Renewables", capacity: "362.5 MW", status: "Completed", image: ayana1 },
-  { id: 5, name: "Solar - Avaada Energy", client: "Avaada Group", capacity: "75 MW", status: "Completed", image: avaada },
-  { id: 6, name: "Solar - Ayana Renewables", client: "Ayana", capacity: "300 MW", status: "Completed", image: ayana2 },
-  { id: 7, name: "Solar - Faben India", client: "Faben India", capacity: "300 MW", status: "Completed", image: faben },
+  { id: 8, name: "Evolta Energy", client: "Solar I&C, Internal Pathways, Fencing", capacity: "50+ MW", status: "Ongoing", image: Evolta },
+  { id: 1, name: "Swelect Energy", client: "Solar I&C, Internal Pathways, Fencing", capacity: "25+ MW", status: "Ongoing", image: swelect },
+  
+  { id: 9, name: "Resolven", client: "Fencing, Roadworks, Infrastructure", capacity: "", status: "Ongoing", image: Resolven },
+  { id: 2, name: "Valente Lifespace", client: "Fencing", capacity: "50KM+", status: "Ongoing", image: valente },
+  { id: 10, name: "Cleanmax", client: "Fencing", capacity: "15+ KM", status: "Ongoing", image: Cleanmax },
+  { id: 3, name: "Adani Green Energy", client: "Solar Civil & Fencing", capacity: "250 MW", status: "Completed", image: adani },
+  { id: 4, name: "Ayana Renewables", client: "Solar Civil & Fencing", capacity: "362.5 MW", status: "Completed", image: ayana1 },
+  { id: 5, name: "Avaada Energy", client: "Solar Civil & Fencing", capacity: "75 MW", status: "Completed", image: avaada },
+  { id: 6, name: "Ayana Renewables", client: "Solar Civil & Fencing", capacity: "300 MW", status: "Completed", image: ayana2 },
+  { id: 7, name: "Faben India", client: "WTG Foundation", capacity: "300 MW", status: "Completed", image: faben },
 ];
 
 const Whatwedo = () => {

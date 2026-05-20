@@ -40,7 +40,8 @@ const Nsmarquee = () => {
                     <img
                       src={item.icon}
                       alt={item.text}
-                      className="p-2 w-6 h-6 mr-2 object-contain"
+                       style={{ width: "45px", height: "4  5px" }}
+                      className="p-2 mr-2 object-contain"
                     />
                     {item.text}
                   </span>

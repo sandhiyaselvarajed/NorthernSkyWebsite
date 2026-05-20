@@ -1,11 +1,11 @@
 import React from "react";
 import "./WhyChooseUs.css";
 
-import img1 from "../assets/fencing_solar/fs23.jpg";
-import img2 from "../assets/fencing_solar/fs1.JPG";
+import img5 from "../assets/fencing_solar/fs23.jpg";
+import img1 from "../assets/fencing_solar/fs1.JPG";
 import img3 from "../assets/fencing_solar/solarpanel6.png";
 import img4 from "../assets/site5.jpg";
-import img5 from "../assets/fencing_solar/solarpanel5.png"
+import img2 from "../assets/northersky6.jpg"
 import img6 from "../assets/solorns1.jpg"
 
 const WhyChooseUs = () => {
