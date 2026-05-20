@@ -10,19 +10,19 @@ import avaada from "../assets/solorns2.jpg";
 import ayana2 from "../assets/ns-site6.jpg";
 import faben from "../assets/fencing_solar/solarpanel5.png";
 
+const projectVal = [
+  { id: 1, name: "Solar - Swelect", client: "Swelect Energy", capacity: "5 MW", status: "Ongoing", image: swelect },
+  { id: 2, name: "Solar - Valente Lifespace", client: "Valente Pvt Ltd", capacity: "500 MW", status: "Ongoing", image: valente },
+  { id: 3, name: "Solar - Adani Green Energy", client: "Adani", capacity: "250 MW", status: "Completed", image: adani },
+  { id: 4, name: "Solar - Ayana Kadapa", client: "Ayana Renewables", capacity: "362.5 MW", status: "Completed", image: ayana1 },
+  { id: 5, name: "Solar - Avaada Energy", client: "Avaada Group", capacity: "75 MW", status: "Completed", image: avaada },
+  { id: 6, name: "Solar - Ayana Renewables", client: "Ayana", capacity: "300 MW", status: "Completed", image: ayana2 },
+  { id: 7, name: "Solar - Faben India", client: "Faben India", capacity: "300 MW", status: "Completed", image: faben },
+];
+
 const Whatwedo = () => {
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState(null);
-
-  const projectVal = [
-    { id: 1, name: "Solar – Swelect", client: "Swelect Energy", capacity: "5 MW", status: "Ongoing", image: swelect },
-    { id: 2, name: "Solar – Valente Lifespace", client: "Valente Pvt Ltd", capacity: "500 MW", status: "Ongoing", image: valente },
-    { id: 3, name: "Solar – Adani Green Energy", client: "Adani", capacity: "250 MW", status: "Completed", image: adani },
-    { id: 4, name: "Solar – Ayana Kadapa", client: "Ayana Renewables", capacity: "362.5 MW", status: "Completed", image: ayana1 },
-    { id: 5, name: "Solar –Avaada Energy", client: "Avaada Group", capacity: "75 MW", status: "Completed", image: avaada },
-    { id: 6, name: "Solar –Ayana Renewables", client: "Ayana", capacity: "300 MW", status: "Completed", image: ayana2 },
-    { id: 7, name: "Solar –Faben India", client: "Faben India", capacity: "300 MW", status: "Completed", image: faben },
-  ];
 
   const filteredProjects =
     filter === "All"
@@ -31,14 +31,21 @@ const Whatwedo = () => {
 
   return (
     <section className="whatwedo-section">
-      <h2 className="section-title">Our Projects</h2>
+      <div className="section-heading">
+        <p className="section-eyebrow">Proof of work</p>
+        <h2 className="section-title">Selected renewable energy projects.</h2>
+        <p className="section-intro">
+          Utility-scale delivery experience across respected energy clients and varied site scopes.
+        </p>
+      </div>
 
-      <div className="filter-buttons">
+      <div className="filter-buttons" aria-label="Filter projects">
         {["All", "Completed", "Ongoing"].map((item) => (
           <button
             key={item}
             className={filter === item ? "active" : ""}
             onClick={() => setFilter(item)}
+            type="button"
           >
             {item}
           </button>
@@ -65,7 +72,7 @@ const Whatwedo = () => {
             <p className={`status ${selected.status.toLowerCase()}`}>
               {selected.status}
             </p>
-            <button onClick={() => setSelected(null)} className="text-center">Close</button>
+            <button onClick={() => setSelected(null)} type="button">Close</button>
           </div>
         </div>
       )}

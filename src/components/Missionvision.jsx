@@ -3,8 +3,7 @@ import "./MissionVision.css";
 
 const Missionvision = () => {
   return (
-    <div className="mission-vision-container">
-
+    <section className="mission-vision-container">
       <div className="mv-wrapper">
         <div className="mv-card vision">
           <h3>Our Vision</h3>
@@ -21,10 +20,9 @@ const Missionvision = () => {
           </p>
 
           <blockquote>
-            “We strive to be at the forefront of the renewable energy revolution,
-            providing solutions for a better future.”
+            "We strive to be at the forefront of the renewable energy revolution,
+            providing solutions for a better future."
           </blockquote>
-
         </div>
 
         <div className="mv-card mission">
@@ -57,8 +55,7 @@ const Missionvision = () => {
           </ul>
         </div>
       </div>
-    
-    </div>    
+    </section>
   );
 };
 

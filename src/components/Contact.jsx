@@ -43,7 +43,7 @@ const Contact = () => {
         </div>
 
         <div className="contact-bottom fade-in">
-          <p>Thank you for choosing Northern Sky. We're committed to your success!</p>
+          <p>Ready to discuss a renewable energy project scope?</p>
         </div>
       </div>
     </section>

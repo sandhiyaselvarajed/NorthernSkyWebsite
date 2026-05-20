@@ -22,8 +22,14 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="services-container">
-      <h2 className="services-title">Our Services</h2>
+    <section className="services-container">
+      <div className="section-heading">
+        <p className="section-eyebrow">Full-scope support</p>
+        <h2 className="services-title">Services that move projects from site to commissioning.</h2>
+        <p className="section-intro">
+          A practical delivery portfolio for solar, wind, civil, fencing, and site infrastructure scopes.
+        </p>
+      </div>
 
       <div className="services-grid">
         {services.map((item, index) => (
@@ -33,7 +39,7 @@ const Services = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 import img1 from "../assets/solor10.jpeg";
@@ -13,86 +14,73 @@ import img8 from "../assets/solorns1.jpg";
 import img9 from "../assets/solorns3.jpg";
 import img10 from "../assets/site5.jpg";
 import img11 from "../assets/solor9.jpeg";
-import img12 from "../assets/fencing_solar/solarpanal1.png"
-// import img12 from "../assets/solor3.jpeg";  
+import img12 from "../assets/fencing_solar/solarpanal1.png";
 
-const images = [img11,img11,img1,img9,img12,img2, img3, img4,img5,img11,img6,img7,img8,img10];
+const images = [img11, img1, img9, img12, img2, img3, img4, img5, img6, img7, img8, img10];
 
 const Home = () => {
   return (
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "85vh",
-        overflow: "hidden",
-      }}
-    >
+    <section className="home-root">
       <Carousel
         fade
         controls={false}
         indicators={false}
-        interval={3000}
+        interval={3500}
         pause={false}
-        style={{
-          position: "absolute",
-          inset: 0,
-          zIndex: 0,
-        }}
+        className="home-carousel"
       >
         {images.map((img, index) => (
           <Carousel.Item key={index}>
-            <div
-              style={{
-                backgroundImage: `url(${img})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                width: "100%",
-                height: "85vh",
-                filter: "brightness(0.65)",
-              }}
-            />
+            <div className="home-bg" style={{ backgroundImage: `url(${img})` }} />
           </Carousel.Item>
         ))}
       </Carousel>
 
-      <div
-        className="container-fluid h-100 d-flex align-items-center"
-        style={{
-          position: "relative",
-          zIndex: 2,
-        }}>
-            <div className="row w-100">
-            <div className="col-md-8 ps-5">
-              <p className="animated-text mt-4">
-                “Empowering Renewable Energy”
-              </p>
-              <p className="animated-text mb-4">
-                “Tailored Civil Engineering Excellence for Sustainable Projects”
-              </p>
+      <div className="home-overlay" />
+
+      <div className="home-content container">
+        <div className="home-copy">
+          <p className="home-eyebrow">Renewable energy construction partner</p>
+          <h1>Execution-ready solar and wind civil infrastructure.</h1>
+          <p className="home-lead">
+            Northern Sky delivers installation, commissioning, fencing, civil works,
+            roads, drains, control buildings, WTG foundations, and site-ready
+            infrastructure for renewable energy projects.
+          </p>
+
+          <div className="home-actions">
+            <Link to="/contact" className="home-btn home-btn-primary">Start a project</Link>
+            <Link to="/projects" className="home-btn home-btn-secondary">View work</Link>
+          </div>
+        </div>
+
+        <aside className="home-proof" aria-label="Northern Sky proof points">
+          <div className="home-proof-label">Proven delivery</div>
+          <div className="home-stats">
+            <div className="home-stat-card">
+              <h2>500+ MW</h2>
+              <p>Solar PV project experience</p>
+            </div>
+            <div className="home-stat-card">
+              <h2>150+ MW</h2>
+              <p>Wind WTG foundation service</p>
+            </div>
+            <div className="home-stat-card">
+              <h2>100+ KM</h2>
+              <p>Single location fencing service</p>
+            </div>
+            <div className="home-stat-card">
+              <h2>10+</h2>
+              <p>Years of renewable expertise</p>
             </div>
           </div>
-
-          <div className="col-md-4 d-flex justify-content-md-end justify-content-center">
-            {/* <h1>Hii everyone </h1> */}
-             <div className="home-stats">
-              <div className="home-stat-card">
-                <h2>8+</h2>
-                <p>Location Covered</p> 
-              </div>
-              <div className="home-stat-card">
-                <h2>16+</h2>
-                <p>Projects Completed</p>
-              </div>
-              <div className="home-stat-card">
-                <h2>6+</h2>
-                <p>Years of Experience</p>
-              </div>
-            </div>
-          </div>
-
+          <p className="home-note">
+            Trusted by renewable energy teams for time-bound execution, quality,
+            and safety on utility-scale sites.
+          </p>
+        </aside>
       </div>
-    </div>
+    </section>
   );
 };
 

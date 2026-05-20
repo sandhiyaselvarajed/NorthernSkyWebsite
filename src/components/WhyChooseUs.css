@@ -1,193 +1,73 @@
+.why-section {
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
+  background: #ffffff;
+}
+
 .heading {
-  text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-  font-weight: 700;
+  margin: 0;
+  color: #172019;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 780;
+  line-height: 1.08;
+  letter-spacing: 0;
 }
 
 .tagline {
-  text-align: center;
-  color: #92D050;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
+  margin: 0.85rem auto 0;
+  max-width: 660px;
+  color: #647067;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .features-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #92D050, #002060);
-  padding: 2rem;
-  border-radius: 15px;
-  color: #fff;
-  font-size: 1.05rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-}
-
-.collage-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.collage {
-  position: relative;
-  width: 520px;
-  height: 420px;
-}
-
-.collage-img {
-  position: absolute;
-  width: 240px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-  animation: float 6s ease-in-out infinite;
-  transition: transform 0.4s ease;
-}
-
-.img-1 {
-  top: 20px;
-  left: 20px;
-}
-
-.img-2 {
-  top: 20px;
-  right: 20px;
-  animation-delay: 1s;
-}
-
-.img-3 {
-  top: 220px;
-  left: 20px;
-  animation-delay: 2s;
-}
-
-.img-4 {
-  top: 220px;
-  right: 20px;
-  animation-delay: 3s;
-}
-
-.collage-img:hover {
-  transform: scale(1.07);
-  z-index: 5;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-  .heading {
-    font-size: 1.8rem;
-    /* margin-bottom: 100px; */
-  }
-
-  .tagline {
-    font-size: 0.9rem;
-    padding: 0 10px;
-  }
-
-  .collage {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-
-  .collage-img {
-    position: static;
-    width: 100%;
-    height: 150px;
-    animation: none;
-  }
+  min-height: 136px;
+  padding: 1.25rem;
+  border: 1px solid #e5ebdc;
+  border-radius: 8px;
+  background: #f8faf5;
+  color: #263129;
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.5;
 }
 
 .collage-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .collage {
-  position: relative;
-  width: 760px;         
-  height: 520px;   
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .collage-img {
-  position: absolute;
-  width: 220px;          
-  height: 150px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-  animation: float 6s ease-in-out infinite;
-  transition: transform 0.4s ease;
-}
-.img-1 { top: 20px; left: 20px; }
-.img-2 { top: 20px; left: 270px; animation-delay: 1s; }
-.img-3 { top: 20px; left: 520px; animation-delay: 2s; }
-
-.img-4 { top: 260px; left: 20px; animation-delay: 3s; }
-.img-5 { top: 260px; left: 270px; animation-delay: 4s; }
-.img-6 { top: 260px; left: 520px; animation-delay: 5s; }
-
-.collage-img:hover {
-  transform: scale(1.07);
-  z-index: 5;
+  border-radius: 8px;
+  border: 1px solid #e3e8db;
+  box-shadow: 0 14px 28px rgba(45, 61, 39, 0.1);
 }
 
-.main-content {
-  padding-top: 70px;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    padding-top: 60px;
-  }
-}
-@media (max-width: 768px) {
-
-  .heading {
-    font-size: 1.8rem;
-    padding-bottom: 50px;
-}
-
-  .tagline {
-    font-size: 0.9rem;
-    /* padding: 0 10px; */
-  }
-
+@media (max-width: 900px) {
+  .features-container,
   .collage {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding: 10px;
-  }
-
-  .collage-img {
-    position: static;       
-    width: 100%;
-    height: 140px;
-    animation: none;   
+    grid-template-columns: 1fr 1fr;
   }
 }
 
+@media (max-width: 576px) {
+  .features-container,
+  .collage {
+    grid-template-columns: 1fr;
+  }
+}

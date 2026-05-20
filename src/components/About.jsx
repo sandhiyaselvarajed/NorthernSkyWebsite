@@ -15,6 +15,8 @@ import logo4 from "../assets/sprng.png"
 import logo5 from "../assets/swelect.webp"
 import logo6 from "../assets/irconlogo.webp"
 import renewpoer from '../assets/renewpoer.webp'
+import evolta from "../assets/New Clients/Evolta.png"
+import resolven from "../assets/New Clients/Resolven.png"
 
 const About = () => {
   useEffect(() => {
@@ -54,7 +56,7 @@ const About = () => {
                 About Northern Sky
               </p>
               <h3 data-aos="flip-up" className="about-title">
-                Driven by Expertise<br></br>Defined by Execution
+                Built for renewable project execution.
               </h3>
 
               <div 
@@ -108,9 +110,9 @@ const About = () => {
               data-aos-duration="500" 
               className="about-text"
             >
-              We are a premier renewable energy installation and commissioning service
-              company, founded by a team of experts with extensive experience at
-              leading multinational renewable energy firms.
+              Northern Sky is a renewable energy installation, commissioning, and
+              civil infrastructure company founded by professionals with experience
+              across leading multinational renewable energy firms.
             </p>
             <p 
               data-aos="fade-left"
@@ -119,10 +121,10 @@ const About = () => {
               data-aos-duration="500" 
               className="about-text-secondary"
             >
-              Based in <span className="erode">Erode</span> - Tamil Nadu, we bring over 6+ years of proven excellence in serving
-              top-tier clients in the renewable energy sector. Our commitment to
-              on-time project completion and dedication to quality and safety sets us
-              apart.
+              Based in <span className="erode">Erode</span>, Tamil Nadu, we bring 6+ years of
+              proven site execution for top-tier clients. Our work is focused on
+              reliable timelines, quality control, safety, and practical field
+              coordination from start to handover.
             </p>
         </div>
             <div
@@ -139,7 +141,7 @@ const About = () => {
                     bullets: [
                       "Established Northern Sky",
                       "Appointed as a trusted solar sub-contractor",
-                      "Successfully delivered initial projects within committed timelinese",
+                      "Delivered initial projects within committed timelines",
                     ],
                   },
                   {
@@ -219,6 +221,8 @@ const About = () => {
               <img src={logo5} alt="Swelect" />
               <img src={logo6} alt="irpl"/>
               <img src={renewpoer} alt="renewpower"/>
+              <img src={evolta} alt="Evolta" />
+              <img src={resolven} alt="Resolven" />
             </div>
           </div>
         </div>

@@ -10,9 +10,11 @@ const Projects = ({ name, client, capacity, status, image, onClick }) => {
 
       <div className="card-content">
         <h3>{name}</h3>
-        {/* <p>{client}</p> */}
-        <span>{capacity}</span>
-        {/* <div className={`badge ${status.toLowerCase()}`}>{status}</div> */}
+        <p>{client}</p>
+        <div className="project-meta">
+          <span>{capacity}</span>
+          <div className={`badge ${status.toLowerCase()}`}>{status}</div>
+        </div>
       </div>
     </div>
   );
