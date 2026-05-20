@@ -6,7 +6,7 @@ import "./Home.css";
 import img1 from "../assets/solor10.jpeg";
 import img2 from "../assets/solor4.jpeg";
 import img3 from "../assets/solor1.jpeg";
-import img4 from "../assets/northersky5.jpg";
+import img4 from "../assets/solor10.jpeg";
 import img5 from "../assets/northersky1.jpg";
 import img6 from "../assets/solorns5.jpeg";
 import img7 from "../assets/ns-site1.jpg";
@@ -58,19 +58,19 @@ const Home = () => {
           <div className="home-proof-label">Proven delivery</div>
           <div className="home-stats">
             <div className="home-stat-card">
-              <h2>500+ MW</h2>
+              <h3>500+ MW</h3>
               <p>Solar PV project experience</p>
             </div>
             <div className="home-stat-card">
-              <h2>150+ MW</h2>
+              <h3>150+ MW</h3>
               <p>Wind WTG foundation service</p>
             </div>
             <div className="home-stat-card">
-              <h2>100+ KM</h2>
+              <h3>100+ KM</h3>
               <p>Single location fencing service</p>
             </div>
             <div className="home-stat-card">
-              <h2>10+</h2>
+              <h3>8+</h3>
               <p>Years of renewable expertise</p>
             </div>
           </div>

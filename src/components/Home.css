@@ -23,13 +23,7 @@
   filter: saturate(0.95) brightness(0.78);
   transform: scale(1.02);
 }
-.heading1{
-  /* font-size: clamp(0.5rem, 2vw, 5.7rem); */
-  font-size: 50px;
-  line-height: 0.98;
-  font-weight: 250;
-  letter-spacing: 0;
-}
+
 
 .home-overlay {
   position: absolute;
@@ -68,11 +62,11 @@
 }
 
 .home-copy h1 {
-  max-width: 680px;
+  max-width: 480px;
   margin: 0;
-  font-size: clamp(2.1rem, 4.7vw, 4.35rem);
+  font-size: clamp(2.1rem, 3.7vw, 4.35rem);
   line-height: 1.04;
-  font-weight: 760;
+  font-weight: 560;
   letter-spacing: 0;
 }
 
@@ -153,7 +147,7 @@
 }
 
 .home-stat-card {
-  min-height: 112px;
+  min-height: 100px;
   padding: 0.9rem 0.75rem;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.09);
