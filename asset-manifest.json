@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f97c85bd.css",
-    "main.js": "/static/js/main.c00aa9ea.js",
+    "main.css": "/static/css/main.58e4ca5a.css",
+    "main.js": "/static/js/main.05b5528f.js",
     "static/media/fs23.jpg": "/static/media/fs23.012480d2ba52f9e4fd49.jpg",
     "static/media/fs10.jpg": "/static/media/fs10.5731d5c093a46805ed1b.jpg",
     "static/media/fs21.jpg": "/static/media/fs21.2f01eed23cf11dcb3d07.jpg",
@@ -26,7 +26,9 @@
     "static/media/ns-site6.jpg": "/static/media/ns-site6.85b5ac8b3fad9210fe06.jpg",
     "static/media/solor9.jpeg": "/static/media/solor9.371d917d20a00e16fcc0.jpeg",
     "static/media/solor3.jpeg": "/static/media/solor3.da94702cb0c3c6d01484.jpeg",
+    "static/media/Evolta.png": "/static/media/Evolta.bfdcbbfcdf893eac7f2a.png",
     "static/media/Ayana.png": "/static/media/Ayana.0e6b0ae8bbd758e31952.png",
+    "static/media/Resolven.png": "/static/media/Resolven.7e5a5549acf753255321.png",
     "static/media/irconlogo.webp": "/static/media/irconlogo.8b9e0d2257526f743b98.webp",
     "static/media/adanilogo.webp": "/static/media/adanilogo.15410fd2527a7c64a91e.webp",
     "static/media/swelect.webp": "/static/media/swelect.f6f301fc150dd646d62f.webp",
@@ -41,11 +43,11 @@
     "static/media/battery-charging.svg": "/static/media/battery-charging.835a02e63425d34abbbae2897a1bb7bf.svg",
     "static/media/audio-waveform.svg": "/static/media/audio-waveform.a4c9bf3f4d7720f356133a9e10111a6a.svg",
     "static/media/road1.svg": "/static/media/road1.8eed2ef7298dfa58d186963806788ccf.svg",
-    "main.f97c85bd.css.map": "/static/css/main.f97c85bd.css.map",
-    "main.c00aa9ea.js.map": "/static/js/main.c00aa9ea.js.map"
+    "main.58e4ca5a.css.map": "/static/css/main.58e4ca5a.css.map",
+    "main.05b5528f.js.map": "/static/js/main.05b5528f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f97c85bd.css",
-    "static/js/main.c00aa9ea.js"
+    "static/css/main.58e4ca5a.css",
+    "static/js/main.05b5528f.js"
   ]
 }
