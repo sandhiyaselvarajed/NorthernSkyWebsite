@@ -36,6 +36,10 @@ export default defineConfig({
   plugins: [react(), contentWatcher()],
   server: { port: 5173 },
   build: {
+    // Built site goes to docs/ so GitHub Pages can publish it straight from the main branch
+    // (Settings → Pages → Deploy from a branch → main → /docs).
+    outDir: "docs",
+    emptyOutDir: true,
     sourcemap: false,
     chunkSizeWarningLimit: 900,
     assetsInlineLimit: 0,

@@ -8,7 +8,7 @@
 | Update the earlier-projects table | Edit `content/earlier-projects.csv` |
 | Add photos | Copy them into `content/photos/` and put the file name in the Photo column |
 | Change company numbers, services, team, leadership, careers, contact | Edit `src/data/site.js` |
-| Publish | Commit and push to `main`. GitHub Actions builds and deploys automatically (see the **Actions** tab) |
+| Publish | Run `npm.cmd run build` (updates the `docs` folder), then commit and push to `main`. GitHub Pages publishes the `docs` folder in about a minute |
 
 ## One-time setup
 1. Install **Node.js LTS** from https://nodejs.org (needed for the local preview).

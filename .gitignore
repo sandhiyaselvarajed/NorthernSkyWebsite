@@ -4,7 +4,6 @@
 # build output — GitHub Actions builds the site; never commit it
 /dist
 /build
-/docs
 /static
 /asset-manifest.json
 

@@ -5,7 +5,7 @@ Read this before changing anything.
 ## What this is
 Single-page marketing site for Northern Sky Developers LLP (solar EPC + installation & commissioning + civil, wind and BESS works; offices Erode, Karur, Bengaluru). Positioning: EPC is the headline offer; past projects are I&C/civil scopes and must stay labelled as such — never describe them as completed EPC projects.
 Stack: Vite + React 18. 3D hero uses three.js via @react-three/fiber (src/three/HeroScene.jsx). Locations use an illustrated SVG India map (src/sections/IndiaMap.jsx, outline from DataMeet india-composite = official boundary, CC BY 4.0 — keep the attribution; never swap in a map that shows a different India boundary).
-Deployed to GitHub Pages by .github/workflows/deploy.yml on every push to `main`. Domain: northernskydevelopers.com.
+Deployed to GitHub Pages from the `main` branch, `/docs` folder. `npm run build` writes the finished site into `docs/`, which IS committed. Always build before pushing. Domain: northernskydevelopers.com.
 
 ## Where things live
 - Projects and the earlier-projects table: `content/projects.csv` and `content/earlier-projects.csv` (edited by the owner in Excel; converted to `src/data/projects.json` by `scripts/content.mjs` before dev/build). Never hand-edit projects.json.
@@ -19,7 +19,7 @@ Deployed to GitHub Pages by .github/workflows/deploy.yml on every push to `main`
 - Client logos: `src/assets/logos/`. Icons: `src/assets/icons/`.
 
 ## Rules
-1. Never commit build output (`dist/`, `build/`, `docs/`, `static/`) or original photos. Never commit files over 1 MB.
+1. Commit the built `docs/` folder (that is what goes live). Never commit `dist/`, `build/`, `static/` or original photos. Never commit files over 1 MB.
 2. New photos: put in `content/photos/`, reference by file name in the CSV (or by name without extension in `site.js`). Never import raw JPG/PNG/HEIC.
 3. Use the `<Img>` component (src/lib/Img.jsx) for photos so phones get small files and big screens get sharp ones.
 4. Do not add new npm packages without asking. No Bootstrap, Tailwind, jQuery, AOS or GSAP: CSS + the existing helpers cover it.
