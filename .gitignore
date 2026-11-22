@@ -1,23 +1,28 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
-# testing
-/coverage
-
-# production
+# build output — GitHub Actions builds the site; never commit it
+/dist
 /build
+/docs
+/static
+/asset-manifest.json
+
+# full-resolution photos (large). Only the optimised copies in src/assets/img are committed.
+/content/photos/
+/photos-original
+
+# generated from content/*.csv on every run
+/src/data/projects.json
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
+Thumbs.db
+.env*
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*.HEIC
+*.heic
+
+# local preview logs
+setup-log.txt
+dev-log.txt

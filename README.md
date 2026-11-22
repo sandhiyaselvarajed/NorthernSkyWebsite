@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Northern Sky website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Everyday tasks
+| I want to… | Do this |
+|---|---|
+| **See the website on my computer** | Double-click `start-website.bat`. It opens http://localhost:5173 |
+| Update projects | Edit `content/projects.csv` in Excel (see `content/HOW-TO-UPDATE.md`) |
+| Update the earlier-projects table | Edit `content/earlier-projects.csv` |
+| Add photos | Copy them into `content/photos/` and put the file name in the Photo column |
+| Change company numbers, services, team, leadership, careers, contact | Edit `src/data/site.js` |
+| Publish | Commit and push to `main`. GitHub Actions builds and deploys automatically (see the **Actions** tab) |
 
-## Available Scripts
+## One-time setup
+1. Install **Node.js LTS** from https://nodejs.org (needed for the local preview).
+2. Move `MOVE-TO-.github-workflows-deploy.yml` to `.github/workflows/deploy.yml`.
+3. GitHub → repo **Settings → Pages → Source: GitHub Actions**. Check the custom domain still shows `northernskydevelopers.com`.
+4. Contact form: create a free access key at web3forms.com using contact@northernskydev.com and paste it into `contact.web3formsKey` in `src/data/site.js`. Until then the form opens the visitor's email app.
 
-In the project directory, you can run:
+## Commands (for developers)
+- `npm run dev`: local preview with live reload. Also processes `content/` first.
+- `npm run build`: production build into `dist/`.
+- `npm run images` / `npm run content`: process photos or spreadsheets on their own.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See `CLAUDE.md` for the rules AI assistants must follow when editing this site.
