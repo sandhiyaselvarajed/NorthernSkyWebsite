@@ -1,11 +1,11 @@
 ﻿Customer,Via (main contractor),Type,Location,Size,Scope,Show
-Avaada,Faben India,Solar,"Trichy, TN",50 MW,"14 km fencing, IDT, ICR & MCR civil, piling, roads",Yes
-Avaada,Faben India,Solar,"Yadgir, KA",50 MW,"14 km fencing, IDT, ICR & MCR civil, piling, switchyard",Yes
-Ayana,PR Infra Developers,Solar,"Pavagada, KA",350 MW,30 km chain-link fencing,Yes
-Ayana,Siddartha Civil Works,Solar,"Pavagada, KA",350 MW,25 km chain-link fencing,Yes
+Avaada,,Solar,"Trichy, TN",50 MW,"14 km fencing, IDT, ICR & MCR civil, piling, roads",Yes
+Avaada,,Solar,"Yadgir, KA",50 MW,"14 km fencing, IDT, ICR & MCR civil, piling, switchyard",Yes
+Ayana,,Solar,"Pavagada, KA",350 MW,30 km chain-link fencing,Yes
+Ayana,,Solar,"Pavagada, KA",350 MW,25 km chain-link fencing,Yes
 Ayana,,Solar,"Pavagada, KA",300 MW,Main gates for solar plant,Yes
-Sprng Energy,Primul Infra,Solar,"Kadapa, AP",250 MW,10 km chain-link fencing,Yes
+Sprng Energy,,Solar,"Kadapa, AP",250 MW,10 km chain-link fencing,Yes
 O2 Power,,Solar,"Agar, MP",200 MW,"Civil works, plant boundary, roads",Yes
-Aditya Birla Renewables,Aditya Rai Infrastructure,Solar I&C,Chhattisgarh,38 MWp,"Installation & commissioning, AC/DC works",Yes
+Aditya Birla Renewables,,Solar I&C,Chhattisgarh,38 MWp,"Installation & commissioning, AC/DC works",Yes
 Fourth Partner,,Solar I&C,"Ottapidaram, TN",29.7 MWp,"Installation & commissioning, AC/DC works",Yes
-KUG,Everenew,Wind,"Ottapidaram, TN",120 MW,"220 kV transmission line incl. right-of-way: supply, erection, testing & commissioning",Yes
+KUG,,Wind,"Ottapidaram, TN",120 MW,"220 kV transmission line incl. right-of-way: supply, erection, testing & commissioning",Yes

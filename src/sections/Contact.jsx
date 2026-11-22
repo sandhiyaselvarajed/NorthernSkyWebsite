@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { contact, company, social, legal } from "../data/site";
+import { contact, company, social, mapsUrl } from "../data/site";
 import { useReveal } from "../lib/useReveal";
-import logo from "../assets/logo-ns.png";
+import { Link } from "../lib/router";
 
 const TYPES = ["Solar EPC (turnkey)", "Solar installation & commissioning", "Transmission lines", "Civil & site works", "Fencing & boundary walls", "Wind or battery-storage civil", "Other"];
 
@@ -39,7 +39,6 @@ export default function Contact() {
   }
 
   const a = contact.address;
-  const socials = Object.entries(social).filter(([, url]) => url);
 
   return (
     <section id="contact" className="section section--dark contact" ref={ref}>
@@ -57,6 +56,7 @@ export default function Contact() {
               <span>Head office</span>
               <address>
                 {company.legalName}<br />{a.street},<br />{a.city} – {a.postalCode}, {a.state}
+                <br /><a className="map-link" href={social.google || mapsUrl} target="_blank" rel="noopener noreferrer">Open in Google Maps →</a>
               </address>
             </li>
             <li><span>Also in</span>{company.offices.slice(1).join(" · ")}</li>
@@ -86,6 +86,7 @@ export default function Contact() {
               <label>Site location &amp; capacity<input name="site" placeholder="e.g. Bhuj, Gujarat · 100 MW" /></label>
               <label>Message<textarea name="message" rows="4" /></label>
               <input type="checkbox" name="botcheck" className="hp" tabIndex="-1" autoComplete="off" aria-hidden="true" />
+              <p className="form-privacy">We use these details only to reply to your enquiry. See our <Link to="/privacy">privacy notice</Link>.</p>
               <button className="btn btn-primary" type="submit" disabled={state === "sending"}>
                 {state === "sending" ? "Sending…" : "Send enquiry"}
               </button>
@@ -95,28 +96,6 @@ export default function Contact() {
         </form>
       </div>
 
-      <footer className="footer">
-        <div className="container footer-inner">
-          <div className="footer-brand">
-            <span className="footer-logo"><img src={logo} alt="" width="26" height="34" /></span>
-            <span className="brand-text">
-              <span className="brand-name">Northern Sky</span>
-              <span className="brand-sub">Developers LLP</span>
-            </span>
-          </div>
-          <div className="footer-legal">
-            <p>© {new Date().getFullYear()} {company.legalName}. All rights reserved.</p>
-            <p>GSTIN {legal.gstin} · Udyam {legal.udyam}{legal.dpiit && " · DPIIT-recognised startup"}</p>
-          </div>
-          {socials.length > 0 && (
-            <ul className="socials">
-              {socials.map(([k, url]) => (
-                <li key={k}><a href={url} target="_blank" rel="noopener noreferrer">{({ google: "Google Maps", linkedin: "LinkedIn" })[k] || k[0].toUpperCase() + k.slice(1)}</a></li>
-              ))}
-            </ul>
-          )}
-        </div>
-      </footer>
     </section>
   );
 }

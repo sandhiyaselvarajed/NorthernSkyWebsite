@@ -21,7 +21,7 @@ export const company = {
 };
 
 // Hero background photo (a name from content/photos, without extension).
-export const heroImage = "array-wide";
+export const heroImage = "swelect-modules";
 // Optional background video for the hero: put an .mp4 in public/videos/ and write its name here,
 // e.g. "site-drone.mp4". Leave empty to use the photo. The photo is still shown while the video loads.
 export const heroVideo = "";
@@ -29,7 +29,7 @@ export const heroVideo = "";
 export const contact = {
   email: "contact@northernskydev.com",
   projectsEmail: "projects@northernskydev.com",
-  phones: ["+91 94439 18260", "+91 78457 96145"],
+  phones: ["+91 78457 96145", "+91 94439 18260"], // first = primary number
   whatsapp: "917845796145", // confirmed: 78457 96145
   address: {
     street: "29/6, Rayapalayam Pudhur-1, Suriyampalayam, Chithode",
@@ -53,6 +53,8 @@ export const legal = {
 // Add full profile URLs to show the links in the footer. Empty = hidden.
 // Google: paste the Google Business Profile link here once it is approved.
 export const social = { linkedin: "https://www.linkedin.com/company/northern-sky-dev-llp/", google: "" };
+// Opens the head office in Google Maps. Replace with the Google Business Profile link once approved.
+export const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Northern+Sky+Developers+LLP+Chithode+Erode+638102";
 
 // Headline numbers count only work we contracted directly (not sub-contract packages).
 // Agreed with the owner on 22 Nov 2026 — see claude/Website_Project_List.md in the project.
@@ -65,6 +67,60 @@ export const stats = [
   { value: 400, suffix: " acres", label: "Land grading, plus 25+ km of roads" },
 ];
 
+// ── WORK HIGHLIGHTS (LinkedIn-post style) ───────────────────
+// A bold result, one real site photo, two lines of story. The first 3 show on the home page.
+// Ongoing jobs: describe the client generically (no names).
+export const highlights = [
+  {
+    title: "12 MWp in 45 days",
+    text: "Execution has begun on 12 MWp of a 13.5 MWp solar plant, on a 45-day programme. Commissioning is targeted for December 2026.",
+    tag: "Solar installation & commissioning", location: "Virudhunagar, Tamil Nadu", status: "Ongoing",
+    image: "virudhunagar-piling", alt: "Rows of piles installed across the Virudhunagar solar site",
+  },
+  {
+    title: "5 km of internal roads in under 20 days",
+    text: "For a 100 MW solar plant. Heavy rain didn't stop the work: our own machines and site team kept it moving, so the client's logistics started on time.",
+    tag: "Roads & land grading", location: "Thoothukudi, Tamil Nadu", status: "Ongoing",
+    image: "roads-gravel", alt: "Newly laid gravel internal road on a solar plant site with wind turbines behind",
+  },
+  {
+    title: "110 kV line, 5.5 km, one team end to end",
+    text: "A turnkey transmission line: survey, design, supply, erection, testing and commissioning, handled by one accountable team.",
+    tag: "Transmission line", location: "Ramanathapuram, Tamil Nadu", status: "Ongoing",
+    image: "tl-foundation-work", alt: "Northern Sky crew working on transmission tower foundations, Ramanathapuram",
+  },
+  {
+    title: "50+ km of fencing for a 500 MW solar park",
+    text: "Supply and erection of chain-link fencing with barbed wire around one of Karnataka's largest solar parks.",
+    tag: "Fencing", location: "Pavagada, Karnataka", status: "Ongoing",
+    image: "valente-fencing", alt: "Chain-link fence with razor wire around a solar park",
+  },
+  {
+    title: "30 MWp across 8 solar plants",
+    text: "Installation & commissioning for Swelect Energy: piling, structures, modules, AC/DC works and testing at eight plants across Tamil Nadu.",
+    tag: "Solar installation & commissioning", location: "Tamil Nadu", status: "Completed",
+    image: "swelect-modules", alt: "Solar modules installed on structures at a Swelect plant",
+  },
+  {
+    title: "300 MW of wind turbine foundations",
+    text: "Foundations for a ReNew Power wind project, delivered over 12 months.",
+    tag: "Wind civil works", location: "Gadag, Karnataka", status: "Completed",
+    image: "wtg-foundation", alt: "Completed wind turbine foundation with anchor cage",
+  },
+];
+
+// ── ABOUT PAGE INTRO ─────────────────────────────────────────
+export const intro = {
+  title: "Built on site execution.",
+  paragraphs: [
+    "Northern Sky Developers LLP is a renewable energy and infrastructure execution company based in Chithode, Erode, with offices in Karur and Bengaluru. Our team has been delivering on utility-scale sites since 2019.",
+    "We install and commission solar plants, build transmission lines from 11 kV to 220 kV, cast wind turbine and BESS foundations, grade land, lay roads and have delivered over 300 km of fencing, for developers including Adani, Ayana, Avaada, ReNew and Swelect.",
+    "Most of our work comes through referrals and repeat clients. We keep it that way by controlling our own machines and crews, and by finishing on the dates we commit to.",
+  ],
+  image: "virudhunagar-field",
+  alt: "Piling completed across the Virudhunagar solar site",
+};
+
 // ── WHAT WE DO ───────────────────────────────────────────────
 // TODO: confirm how engineering is handled (in-house or with design partners).
 export const epc = {
@@ -76,7 +132,7 @@ export const epc = {
     { letter: "C", title: "Construction", text: "Built, tested and commissioned by our own crews" },
   ],
   proof: "Backed by 72.5 MWp of solar installation & commissioning across 11 projects, delivered by our own crews.",
-  image: "transformer-yard",
+  image: "evolta-array",
 };
 
 export const services = [
@@ -104,17 +160,23 @@ export const projects = projectData.projects;
 export const trackRecord = projectData.trackRecord;
 
 export const clients = [
-  { name: "Adani Green Energy", logo: "adani.webp" },
-  { name: "Ayana Renewable Power", logo: "ayana.png" },
-  { name: "Avaada", logo: "avaada.webp" },
-  { name: "ReNew", logo: "renew.webp" },
-  { name: "IRCON International", logo: "ircon.webp" },
+  { name: "Adani Green Energy", logo: "adani-trim.png" },
+  { name: "Ayana Renewable Power", logo: "ayana-trim.png" },
+  { name: "Avaada", logo: "avaada-trim.png" },
+  { name: "ReNew", logo: "renew-trim.png" },
   { name: "Swelect", logo: "swelect.webp" },
   { name: "Cleanmax", logo: "cleanmax.webp" },
   { name: "Sprng Energy", logo: "sprng.png" },
-  // TODO: add logos for Hexa Climate, O2 Power, Aditya Birla Renewables, Fourth Partner if allowed
-  { name: "Evolta Energy", logo: "evolta.png" },
   { name: "Resolven", logo: "resolven.png" },
+  { name: "IRCON International", logo: "ircon-trim.png" },
+  { name: "Evolta Energy", logo: "evolta.png" },
+  { name: "Zetwerk", logo: "zetwerk.svg" },
+  { name: "Zelestra", logo: "zelestra.svg" },
+  // Name tiles until logo files are added to src/assets/logos.
+  { name: "Hexa Climate" },
+  { name: "O2 Power" },
+  { name: "Aditya Birla Renewables" },
+  { name: "Fourth Partner Energy" },
 ];
 
 // ── WHY US ───────────────────────────────────────────────────
@@ -125,18 +187,10 @@ export const whyUs = [
   { title: "Trusted by leading developers", text: "Work for Adani, Ayana, Avaada, ReNew, Swelect, CleanMax, IRCON and others." },
 ];
 
-export const teamStats = [
-  { value: "16", label: "Permanent staff (6 office, 10 site)" },
-  { value: "10", label: "Contract employees" },
-  { value: "Own", label: "Labour team for site execution" },
-];
-// Supervisor/engineer bikes and cars intentionally left out.
-export const fleet = [
-  { name: "Auger piling rigs", count: 3 },
-  { name: "Ajax self-loading concrete mixer", count: 1 },
-  { name: "Eicher truck", count: 1 },
-  { name: "Bolero pickup", count: 1 },
-];
+// Exact staff and equipment counts are intentionally not published (competitive information).
+// Leave these lists empty; the "Why us" section then hides the counts.
+export const teamStats = [];
+export const fleet = [];
 
 // ── LEADERSHIP ───────────────────────────────────────────────
 // Founder photos: save a portrait in content/photos with exactly the file name below
@@ -147,8 +201,13 @@ export const leaders = [
     photo: "founder-vinothkumar",
     role: "Founder & Director",
     discipline: "Civil Engineer",
-    bio: "Site engineering and project planning at Larsen & Toubro, then procurement and subcontract leadership at Sterling & Wilson Renewable Energy, before founding Northern Sky.",
+    bio: "A civil engineer who learned utility-scale delivery from the ground up: first on site and in project planning at Larsen & Toubro, then running procurement and subcontracts for solar projects at Sterling & Wilson Renewable Energy. He founded Northern Sky in 2019 to give developers a site partner that owns its crews, machines and deadlines.",
     focus: "Project execution · Commercial control · Delivery discipline",
+    career: [
+      { org: "Northern Sky Developers LLP", role: "Founder & Director", note: "Since 2019" },
+      { org: "Sterling & Wilson Renewable Energy", role: "Procurement & subcontract leadership", note: "Utility-scale solar" },
+      { org: "Larsen & Toubro", role: "Site engineering & project planning", note: "Where it started" },
+    ],
   },
   {
     name: "Raja K",
@@ -176,13 +235,13 @@ export const locations = [
   { id: "erode", name: "Erode", area: "Tamil Nadu", note: "Head office", lat: 11.341, lng: 77.717, office: true },
   { id: "karur", name: "Karur", area: "Tamil Nadu", note: "Office", lat: 10.96, lng: 78.077, office: true },
   { id: "blr", name: "Bengaluru", area: "Karnataka", note: "Office", lat: 12.972, lng: 77.594, office: true },
-  { id: "pavagada", name: "Pavagada", area: "Karnataka", note: "IRCON / Valente: 50+ km fencing; Ayana: 15 km fencing", lat: 14.031, lng: 77.264 },
-  { id: "ramanathapuram", name: "Ramanathapuram", area: "Tamil Nadu", note: "Heft Energy: 110 kV transmission line", lat: 9.371, lng: 78.83 },
-  { id: "thoothukudi", name: "Thoothukudi", area: "Tamil Nadu", note: "Zetwerk: land grading and roads", lat: 8.764, lng: 78.135 },
+  { id: "pavagada", name: "Pavagada", area: "Karnataka", note: "Solar park fencing, 50+ km (ongoing); Ayana: 15 km fencing", lat: 14.031, lng: 77.264 },
+  { id: "ramanathapuram", name: "Ramanathapuram", area: "Tamil Nadu", note: "110 kV transmission line (ongoing)", lat: 9.371, lng: 78.83 },
+  { id: "thoothukudi", name: "Thoothukudi", area: "Tamil Nadu", note: "Land grading and roads, 100 MW solar (ongoing)", lat: 8.764, lng: 78.135 },
   { id: "gadag", name: "Gadag", area: "Karnataka", note: "ReNew / Faben: 300 MW wind", lat: 15.43, lng: 75.63 },
   { id: "mandsaur", name: "Mandsaur", area: "Madhya Pradesh", note: "Hexa Climate: 200 MWh BESS", lat: 24.07, lng: 75.07 },
   { id: "kalaburagi", name: "Kalaburagi", area: "Karnataka", note: "Avaada: piling, ICR & substation", lat: 17.32, lng: 76.84 },
-  { id: "virudhunagar", name: "Virudhunagar", area: "Tamil Nadu", note: "Evolta: 13.5 MWp I&C", lat: 9.585, lng: 77.958 },
+  { id: "virudhunagar", name: "Virudhunagar", area: "Tamil Nadu", note: "13.5 MWp solar I&C (ongoing)", lat: 9.585, lng: 77.958 },
   { id: "trichy", name: "Tiruchirappalli", area: "Tamil Nadu", note: "Resolven: roads and fencing", lat: 10.79, lng: 78.705 },
   { id: "dindigul", name: "Sengurichi, Dindigul", area: "Tamil Nadu", lat: 10.366, lng: 77.971 },
   { id: "jammalamadugu", name: "Jammalamadugu", area: "Andhra Pradesh", note: "Ayana, Adani, Sprng Energy", lat: 14.852, lng: 78.226 },
@@ -192,6 +251,8 @@ export const locations = [
   { id: "yadgir", name: "Yadgir", area: "Karnataka", note: "Avaada 50 MW", lat: 16.77, lng: 77.138 },
   { id: "jagaluru", name: "Jagaluru", area: "Karnataka", note: "CleanMax: 15+ km fencing", lat: 14.52, lng: 76.34 },
   { id: "sivakasi", name: "Sivakasi", area: "Tamil Nadu", note: "Swelect", lat: 9.449, lng: 77.798 },
+  { id: "manapparai", name: "Manapparai", area: "Tamil Nadu", note: "Swelect", lat: 10.608, lng: 78.425 },
+  { id: "kanchipuram", name: "Kanchipuram", area: "Tamil Nadu", note: "Swelect", lat: 12.834, lng: 79.704 },
   { id: "chhattisgarh", name: "Chhattisgarh", area: "Chhattisgarh", note: "Aditya Birla: 38 MWp I&C", lat: 21.25, lng: 81.63 },
   { id: "bhuj", name: "Bhuj", area: "Gujarat", lat: 23.242, lng: 69.667 },
 ];

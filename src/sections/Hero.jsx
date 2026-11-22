@@ -4,6 +4,7 @@ import { company, stats, heroImage, heroVideo } from "../data/site";
 import { picture } from "../lib/images";
 import Img from "../lib/Img";
 import CountUp from "./CountUp";
+import { Link } from "../lib/router";
 
 export default function Hero() {
   return (
@@ -31,8 +32,8 @@ export default function Hero() {
           <h1>{company.headline}</h1>
           <p className="hero-lead">{company.lead}</p>
           <div className="hero-actions">
-            <a href="#contact" className="btn btn-primary">Discuss a project</a>
-            <a href="#projects" className="btn btn-ghost">See our projects</a>
+            <Link to="/contact" className="btn btn-primary">Discuss a project</Link>
+            <Link to="/projects" className="btn btn-ghost">See our projects</Link>
           </div>
         </div>
       </div>

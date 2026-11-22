@@ -2,8 +2,9 @@ import { epc, services } from "../data/site";
 import Img from "../lib/Img";
 import { iconUrl } from "../lib/images";
 import { useReveal } from "../lib/useReveal";
+import { Link } from "../lib/router";
 
-export default function Services() {
+export default function Services({ compact = false }) {
   const ref = useReveal();
   return (
     <section id="services" className="section" ref={ref}>
@@ -14,7 +15,7 @@ export default function Services() {
           <p className="lead">Hand us the whole solar plant, or bring us in for a defined scope. The same crews and machines do the work.</p>
         </div>
 
-        <article className="epc">
+        {!compact && <article className="epc">
           <div className="epc-body">
             <span className="epc-tag">New · Turnkey</span>
             <h3>{epc.title}</h3>
@@ -30,9 +31,9 @@ export default function Services() {
             <p className="epc-proof">{epc.proof}</p>
           </div>
           <div className="epc-media">
-            <Img name={epc.image} alt="Transformer and switchgear yard on a solar plant built by Northern Sky" sizes="(max-width: 900px) 100vw, 45vw" />
+            <Img name={epc.image} alt="Northern Sky team casting foundations on the 13.5 MWp solar project in Virudhunagar" sizes="(max-width: 900px) 100vw, 45vw" />
           </div>
-        </article>
+        </article>}
 
         <ul className="service-grid">
           {services.map((s, i) => (
@@ -43,6 +44,7 @@ export default function Services() {
             </li>
           ))}
         </ul>
+        {compact && <p className="more-link"><Link to="/services" className="text-link">Explore our services →</Link></p>}
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ function Card({ p }) {
     <li className="project-card">
       <div className={`project-media ${p.image ? "" : "project-media--plain"}`}>
         {p.image ? (
-          <Img name={p.image} alt={`${p.client} project site`} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 20vw" preferWidth={480} />
+          <Img name={p.image} alt={`Site photo: ${p.client}, ${p.location}`} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 20vw" preferWidth={480} />
         ) : (
           <span className="project-media-label" aria-hidden="true">{p.asset}</span>
         )}
@@ -31,7 +31,7 @@ export default function Projects() {
     <section id="projects" className="section section--tint" ref={ref}>
       <div className="container">
         <div className="section-head" data-reveal>
-          <p className="eyebrow">Projects</p>
+          <p className="eyebrow">All projects</p>
           <h2>Proof on the ground.</h2>
           <p className="lead">{ongoing.length} projects on site right now, and {done.length + trackRecord.length}+ delivered for India&apos;s leading developers.</p>
         </div>
@@ -52,7 +52,7 @@ export default function Projects() {
                 <tbody>
                   {trackRecord.map((r, i) => (
                     <tr key={i}>
-                      <td><strong>{r.customer}</strong>{r.via && <small>via {r.via}</small>}</td>
+                      <td><strong>{r.customer}</strong></td>
                       <td>{r.type}</td><td>{r.location}</td><td className="nowrap">{r.size}</td><td>{r.scope}</td>
                     </tr>
                   ))}

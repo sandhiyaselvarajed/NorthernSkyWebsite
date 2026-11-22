@@ -20,13 +20,20 @@ export default function About() {
           {shown.map((l) => (
             <li className="leader" key={l.name} data-reveal>
               <div className="leader-photo">
-                {hasImage(l.photo) ? <Img name={l.photo} alt={l.name} sizes="120px" preferWidth={480} /> : <span aria-hidden="true">{initials(l.name)}</span>}
+                {hasImage(l.photo) ? <Img name={l.photo} alt={l.name} sizes="200px" preferWidth={480} /> : <span aria-hidden="true">{initials(l.name)}</span>}
               </div>
               <div>
                 <h3>{l.name}</h3>
                 <p className="leader-role">{l.role} · {l.discipline}</p>
                 <p>{l.bio}</p>
-                <p className="leader-focus">{l.focus}</p>
+                {l.career && (
+                  <ol className="career">
+                    {l.career.map((c) => (
+                      <li key={c.org}><strong>{c.org}</strong><span>{c.role}</span><small>{c.note}</small></li>
+                    ))}
+                  </ol>
+                )}
+                <ul className="focus-chips">{l.focus.split(" · ").map((f) => <li key={f}>{f}</li>)}</ul>
               </div>
             </li>
           ))}
